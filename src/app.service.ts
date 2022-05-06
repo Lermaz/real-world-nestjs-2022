@@ -1,8 +1,12 @@
 import { Injectable } from '@nestjs/common';
+const { version: Version, licente: Licence } = require('../package.json');
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getVersion(): any {
+    return {
+      version: Version,
+      license: Licence,
+    };
   }
 }
